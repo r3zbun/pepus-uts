@@ -1,3 +1,10 @@
+<?php
+//proteksi agar file tidak dapat diakses langsung
+if(!defined('MY_APP')) {
+    die('Akses langsung tidak diperbolehkan!');
+}
+?>
+
 <div class="container-fluid px-4">
     <h1 class="mt-4">Dashboard</h1>
     <ol class="breadcrumb mb-4">

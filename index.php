@@ -1,3 +1,10 @@
+<?php
+define('MY_APP', true);
+
+// Get hal
+$page = isset($_GET['hal']) ? $_GET['hal'] : 'dashboard';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <?php include "includes/header.php" ?>
@@ -10,7 +17,6 @@
             <div id="layoutSidenav_content">
                 <main>
                     <?php 
-                    $page = isset($_GET['hal']) ? $_GET['hal'] : 'dashboard';
                     $file = "pages/" . $page . ".php";
                     if(file_exists($file)) {
                         include $file;
@@ -18,7 +24,6 @@
                         echo "<h1 class='text-center mt-5'>Halaman tidak ditemukan!</h1>";
                     }
                     ?>
-
                 </main>
                 <?php include "includes/footer.php" ?>
             </div>
