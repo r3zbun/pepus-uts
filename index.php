@@ -3,6 +3,8 @@ define('MY_APP', true);
 
 // Get hal
 $page = isset($_GET['hal']) ? $_GET['hal'] : 'dashboard';
+// title untuk di header
+$title = ucwords(str_replace('-', ' ', $page));
 ?>
 
 <!DOCTYPE html>
